@@ -21,8 +21,8 @@ function fetchData(cityName) {
       // Update City name
       const currentDate = dayjs().format('MM/DD/YYYY');
       console.log(currentDate);
-      const cityNameElement = document.querySelector("#today h3")
-      cityNameElement.textContent = `${cityName} ${currentDate}`;
+      const cityNameElement = document.querySelector("#today h3");
+      cityNameElement.textContent = `${cityName} (${currentDate})`;
 
       // Update the temperature
       const temperature = data.main.temp;
@@ -64,6 +64,20 @@ function handleForecasts(lat, lon) {
     .then(data => {
       // Handle the data returned from the API
       console.log(data);
+
+      // Update the forecast cards
+      const forecastCards = document.querySelectorAll("#forecast .card");
+      data.list.forEach((forecast, index) => {
+        const date = dayjs(forecast.dt_txt).format('MM/DD/YYYY');
+        const temperature = forecast.main.temp;
+        const windSpeed = forecast.wind.speed;
+        const humidity = forecast.main.humidity;
+        const forecastCard = forecastCards[index];
+        forecastCard.querySelector("h3").textContent = `(${date})`;
+        forecastCard.querySelector("h4:nth-child(2)").textContent = `Temp: ${temperature}°C`;
+        forecastCard.querySelector("h4:nth-child(3)").textContent = `Wind: ${windSpeed} M/S`;
+        forecastCard.querySelector("h4:nth-child(4)").textContent = `Humidity: ${humidity}%`;
+      });
     })
     .catch(error => {
       // Handle any errors that occur during the API call
