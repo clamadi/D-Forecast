@@ -47,7 +47,38 @@ h1 {
 .weather-data{
     width: 100%;
 }
-/* #today {
+
+#today .icon img{
+    max-width: 120px;
+    margin-top: -15px;
+}
+#today.icon h6{
+    margin-top: -10px;
+    text-transform: capitalize;
+}
+
+.weather-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .card h3 {
+    margin: 0;
+  }
+  
+  .card h4 {
+    margin: 10px 0;
+  }
+
+  /* #today {
     display: flex;
     border-radius: 10px;
     padding: 20px 70px 20px 20px;
@@ -61,15 +92,35 @@ h1 {
     font-size: 1rem;
     font-weight: 500;
 } */
-#today .icon img{
-    max-width: 120px;
-    margin-top: -15px;
-}
-#today.icon h5{
-    margin-top: -10px;
-    text-transform: capitalize;
-}
-#forecast .weather-cards .cards{
+
+/* #forecast {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+  
+  .weather-cards {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .card {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .card h3 {
+    margin: 0;
+  }
+  
+  .card h4 {
+    margin: 10px 0;
+  }
+ */
+
+/* #forecast .weather-cards .cards{
     color:#fff;
     padding: 18px 16px;
     list-style: none;
@@ -84,7 +135,7 @@ font-weight: 600;
 #forecast .weather-cards .cards img{
     max-width: 70px;
     margin: 5px 0 -12px 0 ;
-}
+} */
 
 
 
