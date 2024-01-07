@@ -55,12 +55,6 @@ h1 {
 .weather-data{
     width: 100%;
 }
-
-/* #today {
-  display: flex;
-  flex-direction: row;
-  border-top: 2px solid black;
-} */
 .icon{
     float: right;
     margin-left: 10px;
