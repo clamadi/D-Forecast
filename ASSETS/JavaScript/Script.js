@@ -66,9 +66,9 @@ function handleForecasts(lat, lon) {
       console.log(data);
 
       // Update the forecast cards
-      const forecastCards = document.querySelectorAll("#forecast .card");
+      const forecastCards = document.querySelectorAll("#forecast .weather-cards .card");
       data.list.forEach((forecast, index) => {
-        const date = dayjs(forecast.dt_txt).format('MM/DD/YYYY');
+        const date = dayjs(forecast.dt_txt).format('DD/MMM/YYYY');
         const temperature = forecast.main.temp;
         const windSpeed = forecast.wind.speed;
         const humidity = forecast.main.humidity;
