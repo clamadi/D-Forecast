@@ -21,7 +21,8 @@ The image below gives you a sample of what you will see on the page.
 
 
 ### Resources
-*[Open Weather](https://openweathermap.org/forecast5)
+
+* [Open Weather](https://openweathermap.org/forecast5)
 * [CSS Property Values](https://www.w3schools.com/cssref/pr_class_display.php#:~:text=Demo%20%E2%9D%AF-,block,takes%20up%20the%20whole%20width)
 * [Bootstrap Icons](https://icons.getbootstrap.com/?q=linked)
 
